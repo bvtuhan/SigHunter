@@ -10,9 +10,6 @@ use rayon::iter::{IntoParallelIterator, ParallelIterator};
 
 pub mod signature;
 
-#[cfg(feature = "py_bindings")]
-pub mod py_bindings;
-
 pub fn init_os() -> Result<OsInstanceArcBox<'static>> {
     let os = {
         #[cfg(windows)]
